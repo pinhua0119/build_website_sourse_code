@@ -50,6 +50,11 @@ Pin's Note 個人網站 : [https://pinhua0119.github.io/](https://pinhua0119.git
 ![](/images/build_website/about.png)
 ![](/images/build_website/prove.png)
 
+Github 個人網站程式碼 : [https://github.com/pinhua0119/pinhua0119.github.io](https://github.com/pinhua0119/pinhua0119.github.io)
+
+Github 架設網站原始程式碼 : [https://github.com/pinhua0119/build_website_sourse_code](https://github.com/pinhua0119/build_website_sourse_code)
+
+
 ## 肆、 課程心得
 
 本課程在架設網站時，使用大量 HTHL 和 CSS 的程式語法，對於沒有學過前端語言的我，在剛開始著實有些困難。
