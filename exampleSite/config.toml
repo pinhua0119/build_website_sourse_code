@@ -1,0 +1,157 @@
+######################## default(默認) configuration(配置)(預設設定) ####################
+baseURL = "https://pinhua0119.github.io"                  # 個人網站網址
+languageCode = "zh-tw"                                    # 語言
+title = "Pin's Note"                                      # 網站名稱
+theme = "liva-hugo"                                       
+summaryLength = "10"                                      # 摘要長度
+paginate = 6                                              # 單頁貼文數
+# disqusShortname = "pinhua0119"                          # disqus評論功能
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+############################# Plugins(插件) ##############################
+[params.plugins]
+
+# CSS Plugins
+[[params.plugins.css]]
+URL = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+URL = "plugins/slick/slick.css"
+[[params.plugins.css]]
+URL = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.css]]
+URL = "plugins/venobox/venobox.css"
+
+# JS Plugins
+[[params.plugins.js]]
+URL = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+URL = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+URL = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+URL = "plugins/venobox/venobox.min.js"
+[[params.plugins.js]]
+URL = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+URL = "plugins/search/mark.js"
+[[params.plugins.js]]
+URL = "plugins/search/search.js"
+
+############################## navigation(導覽列) ###############################
+[menu]
+
+# main menu(主導覽列)
+[[menu.main]]
+name = "Home"
+URL = "/"
+weight = 1
+
+[[menu.main]]
+name = "About"
+URL = "about"
+weight = 2
+
+#[[menu.main]]
+#name = "Post"
+#URL = "blog/"
+#weight = 3
+
+#[[menu.main]]
+#name = "Contact"
+#URL = "contact/"
+#weight = 4
+
+# footer menu(頁腳導覽列)
+[[menu.footer]]
+name = "Home"
+URL = "/"
+weight = 1
+
+[[menu.footer]]
+name = "About"
+URL = "about/"
+weight = 2
+
+#[[menu.footer]]
+#name = "Post"
+#URL = "blog/"
+#weight = 2
+
+#[[menu.footer]]
+#name = "Contact"
+#URL = "contact/"
+#weight = 3
+
+#################### default parameters(預設參數) ################################
+[params]
+logo = "images/pin_note.png"                     # logo 圖片
+home = "Home"   
+
+# Meta data(元數據)
+description = "我的學習筆記"                      # 簡短描述
+author = "PinHua"                                # 文章的作者名
+
+# Google Analitycs(Google 分析)
+googleAnalitycsID = "UA-259245142-1"             # Google Analytics
+# googleAnalytics = "UA-259245142-1"             # 自行新增Google Analytics
+
+# Contact Information(聯絡信息)
+# mobile = "0972243102"                          # 手機
+email = "pinhual0119@gmail.com"                  # 信箱
+location = "Taiwan"                              # 地點
+
+# copyright(版權)
+# copyright = "| copyright &copy; 2021 [Themefisher](https://themefisher.com/hugo-themes/) All Rights Reserved |"
+
+# Preloader(預加載器)
+[params.preloader]
+enable = true
+preloader = "" # use .png , .svg or .gif format
+
+# search(搜尋)
+[params.search]
+enable = true
+
+############################ news letter(訂閱信) ########################
+[params.newsletter]
+enable = false                                   # 是否開啟訂閱信功能
+title = "Join Our Newsletter"
+content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero"
+
+# cookies
+[params.cookies]
+enable = true
+expire_days = 2
+
+############################# social site(社交網站) ########################
+
+#[[params.social]]
+#title = "facebook"
+#icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
+#link = "#"
+
+#[[params.social]]
+#title = "twitter"
+#icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
+#link = "#"
+
+#[[params.social]]
+#title = "instagram"
+#icon = "ti-instagram" # themify icon : https://themify.me/themify-icons
+#link = "#"
+
+[[params.social]]
+title = "github"
+icon = "ti-github"                                    # themify icon : https://themify.me/themify-icons
+link = "https://github.com/pinhua0119"                # github個人網站連結
+
+#[[params.social]]
+#title = "linkedin"
+#icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
+#link = "#"
+
+[markup]                                              # markup 的配置塊
+  [markup.highlight]                                  # highlight 為 markup裡面的子配置塊
+    style = 'paraiso-dark'                            # 更改程式碼的字型

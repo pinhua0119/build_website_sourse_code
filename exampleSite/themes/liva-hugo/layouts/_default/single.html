@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">                     <!-- 調整單列寬度 -->
+        {{ range .Params.Categories }}
+        <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}"
+          class="text-primary">{{ . | title | humanize }}</a>
+        {{ end }}
+        <h2>{{ .Title | markdownify }}</h2>
+        <div class="mb-3 post-meta">
+          <span>By {{if .Params.Author}}{{ .Params.Author }}{{else}}{{.Site.Params.Author}}{{end}}</span>
+          {{ if not .Params.HideDate }}
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>{{ .PublishDate.Format "2006-01-02" }}</span>     <!-- 更改文章內日期格式 -->
+          {{ end }}
+        </div>
+        {{ if .Params.image }}
+        <img src="{{ .Params.Image | absURL }}" class="img-fluid w-100 mb-4" alt="{{ .Title | markdownify }}">
+        {{ end }}
+        <div class="content mb-5">
+          {{ .Content }}
+        </div>
+
+        <!-- comments -->                                 <!-- 評論功能 -->
+        {{ template "_internal/disqus.html" . }}          <!-- 新增disqus評論功能於主題中 -->
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

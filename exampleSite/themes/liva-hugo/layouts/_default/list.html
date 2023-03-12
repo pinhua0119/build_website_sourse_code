@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+<!-- blog post -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+
+      <!-- sidebar(邊攔) -->                             <!-- 將側邊攔放至左邊 -->
+      <!-- {{ partial "sidebar.html" . }} -->           <!-- 呼叫 partial 裡面的 "sidebar.html" 文件 -->
+      <!-- /sidebar -->
+      
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="row">
+          {{ $paginator := .Paginate .Data.Pages }}
+          {{ range $paginator.Pages }}
+          {{ .Render "post" }}                          <!-- 呼叫同個資料夾裡面的 "post.html"文件 -->
+          {{ end }}
+        </div>
+      </div>
+      
+      <!-- sidebar(邊攔) -->                             <!-- 將側邊攔放至右邊 -->
+      {{ partial "sidebar.html" . }}                    <!-- 呼叫 partial 裡面的 "sidebar.html" 文件 -->
+      <!-- /sidebar -->
+
+      <!-- pagination -->
+      <div class="col-12 mt-5">
+        {{ template "_internal/pagination.html" . }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /blog post -->
+
+{{ end }}

@@ -1,0 +1,23 @@
+<div class="col-md-6 mb-4">
+    <article class="card">
+        {{ if .Params.Image }}                                                   <!-- 判斷 Markdown 裡面是否有圖片設定 -->
+        <img src="{{ .Params.Image | absURL }}" class="card-img-top" alt="{{ .Title | markdownify }}">
+        {{ end }}
+        <div class="card-body px-0">
+        {{ range .Params.Categories }}
+        <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}"
+            class="text-primary">{{ . | title | humanize }}</a>
+        {{ end }}
+        <a href="{{ .Permalink }}" class="h5 d-block my-3">{{ .Title | markdownify }}</a>
+        <div class="mb-3 post-meta">
+            <span>By {{ .Site.Params.Author }}</span>
+            {{ if not .Params.HideDate }}
+            <span class="border-bottom border-primary px-2 mx-1"></span>
+            <span>{{ .PublishDate.Format "2006-01-02" }}</span>                   <!-- 更改日期格式 -->
+            {{ end }}
+        </div>
+        <p class="card-text">{{ .Description }}</p>                               <!-- 將文章簡述由前幾行改為描述 -->
+        <a href="{{ .Permalink }}" class="btn btn-outline-primary">read more</a>
+        </div>
+    </article>
+</div>

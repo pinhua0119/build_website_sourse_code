@@ -1,0 +1,8 @@
+enable : false                                   # 是否開起相簿功能
+gallery:                                         # 相簿照片擺放順序位置
+  - image : "images/gallery/1.jpg"               # 第一張照片
+  - image : "images/gallery/2.jpg"               # 第二張照片
+  - image : "images/gallery/3.jpg"               # 第三張照片
+  - image : "images/gallery/4.jpg"               # 第四張照片
+  - image : "images/gallery/5.jpg"               # 第五張照片
+  - image : "images/gallery/6.jpg"               # 第六張照片
